@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="banner__fullname">{{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</div>
       <div class="banner__position">{{ person.position }}</div>
-      <div v-if="person.birth" class="banner__location">{{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</div>
+      <div v-if="person.birth" class="banner__location">1994年02月02日生</div>
     </div>
 
     <div class="content">
@@ -48,11 +48,11 @@
           </div>
 
           <div class="section-content section-content--plain">
-            <div class="section-link">
+            <!-- <div class="section-link">
               <i class="section-link__icon material-icons">business</i>{{ person.contact.street }}
-            </div>
+            </div> -->
 
-            <a
+            <!-- <a
               class="section-link link"
               :href="contactLinks.email">
               <i class="section-link__icon material-icons">mail</i>{{ person.contact.email }}
@@ -60,7 +60,7 @@
 
             <div class="section-link">
               <i class="section-link__icon material-icons">phone</i>{{ person.contact.phone }}
-            </div>
+            </div> -->
 
             <a
               v-if="person.contact.website"
@@ -154,7 +154,8 @@
               :href="project.url">
               <span class="section-content__header"> {{ project.name }} </span>
               <span class="section-content__subheader">{{ project.platform }}</span>
-              <span class="section-content__text"> {{ project.description }} </span>
+              <span class="section-content__text"> {{ project.timeperiod }} </span>
+              <span class="section-content__text--light"> {{ project.description }} </span>
             </a>
           </div>
         </div>
